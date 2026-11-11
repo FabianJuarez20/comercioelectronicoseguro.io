@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión · Ludingo</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+<h1>🎮 Lud<span>ingo</span></h1>
+<nav><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="carrito.html">Carrito (<span id="nCart">0</span>)</a><a href="login.html" class="on">Iniciar sesión</a></nav>
+</header>
+<main>
+<div id="msg" class="msg" role="status"></div>
+<div class="auth-box">
+<h2>Tu cuenta</h2>
+<div class="tabs">
+<button id="tabIn" class="on" type="button" data-tab="in">Iniciar sesión</button>
+<button id="tabUp" class="sec" type="button" data-tab="up">Crear cuenta</button>
+</div>
+<form id="fIn" class="stack" autocomplete="on">
+<input id="lUsr" placeholder="Usuario" autocomplete="username" required>
+<input id="lPass" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+<button type="submit">Entrar</button>
+</form>
+<form id="fUp" class="stack" autocomplete="on" hidden>
+<input id="rUsr" placeholder="Usuario (3-20 caracteres)" autocomplete="username" required>
+<input id="rNom" placeholder="Nombre completo" autocomplete="name" required>
+<input id="rMail" type="email" placeholder="Correo electrónico" autocomplete="email" required>
+<input id="rPass" type="password" placeholder="Contraseña (mín. 8 caracteres)" autocomplete="new-password" required>
+<input id="rPass2" type="password" placeholder="Repite la contraseña" autocomplete="new-password" required>
+<button type="submit">Crear cuenta</button>
+<span class="note">Las cuentas nuevas tienen rol <strong>Usuario</strong>. Solo un administrador puede asignar el rol de Administrador.</span>
+</form>
+</div>
+</main>
+<footer>Proyecto de Comercio Electrónico · Programación Web ISC 5-1</footer>
+<script src="js/api.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

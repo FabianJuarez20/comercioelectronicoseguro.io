@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrar · Ludingo</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-acceso="admin">
+<header>
+<h1>🎮 Lud<span>ingo</span></h1>
+<nav><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="carrito.html">Carrito (<span id="nCart">0</span>)</a><a href="pedidos.html">Pedidos</a><a href="admin.html" class="on">Administrar</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<main>
+<div id="msg" class="msg" role="status"></div>
+<h2>Administración</h2>
+<p class="note">El catálogo se guarda en el servidor. Puedes importar un archivo JSON desde tu computadora (reemplaza el catálogo actual) o exportar el catálogo vigente.</p>
+<div class="bar">
+<label>Importar catálogo (.json): <input id="fileIn" type="file" accept=".json,application/json"></label>
+<button id="btnExp" class="sec" type="button">Exportar catálogo</button>
+<button id="btnReset" class="del" type="button">Restablecer catálogo</button>
+</div>
+<h3>Usuarios y roles</h3>
+<p class="note">Las cuentas se guardan en el servidor con la contraseña cifrada. Rol <strong>Usuario</strong>: compra y ve sus pedidos. Rol <strong>Administrador</strong>: además gestiona catálogo, usuarios y ve todos los pedidos.</p>
+<div class="form">
+<input id="uUsr" placeholder="Usuario">
+<input id="uNom" placeholder="Nombre completo">
+<input id="uMail" type="email" placeholder="Correo electrónico">
+<input id="uPass" type="password" placeholder="Contraseña (mín. 8)" autocomplete="new-password">
+<select id="uRol"><option value="usuario">Usuario</option><option value="admin">Administrador</option></select>
+<button id="btnUser" type="button">Crear usuario</button>
+</div>
+<div id="listaU"></div>
+<h3 id="formTitle">Agregar videojuego</h3>
+<div class="form">
+<input id="aNom" placeholder="Nombre">
+<select id="aGen"></select>
+<select id="aPla"></select>
+<input id="aPre" type="number" min="0" step="0.01" placeholder="Precio (MXN)">
+<input id="aDes" type="number" min="0" max="100" step="1" placeholder="Descuento % (opcional)">
+<input id="aDesc" placeholder="Descripción (opcional)">
+<input id="aEmo" placeholder="Emoji portada" maxlength="4">
+<button id="btnAdd" type="button">Agregar</button>
+<button id="btnCancel" class="sec" type="button" hidden>Cancelar</button>
+</div>
+<h3>Catálogo actual</h3>
+<div id="lista"></div>
+</main>
+<footer>Proyecto de Comercio Electrónico · Programación Web ISC 5-1</footer>
+<script src="js/api.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

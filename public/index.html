@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio · Ludingo</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+<h1>🎮 Lud<span>ingo</span></h1>
+<nav><a href="index.html" class="on">Inicio</a><a href="catalogo.html">Catálogo</a><a href="carrito.html">Carrito (<span id="nCart">0</span>)</a><a href="pedidos.html">Pedidos</a><a href="admin.html">Administrar</a><a href="contacto.html">Contacto</a></nav>
+</header>
+<main>
+<div id="msg" class="msg" role="status"></div>
+<h2>Ludingo: videojuegos en línea</h2>
+<p>Ludingo reúne en un solo lugar videojuegos en línea para PC, consolas y móvil, con promociones y descuentos en juegos seleccionados. Es un proyecto de la materia de Programación Web (ISC 5-1).</p>
+<h2>¿Qué encontrarás aquí?</h2>
+<p>Un catálogo de videojuegos en línea que puedes buscar y filtrar por género y plataforma, un carrito de compras y un historial de pedidos. El catálogo y las cuentas viven en el servidor de Ludingo. Puedes explorar sin cuenta; para comprar y ver tus pedidos inicia sesión o crea una cuenta (hay dos roles: Usuario y Administrador).</p>
+<p>Los administradores pueden agregar, editar y quitar juegos, importar o exportar el catálogo en JSON y gestionar usuarios desde la sección Administrar.</p>
+<p><a class="btn" href="catalogo.html">Ver catálogo completo</a></p>
+<h2>Juegos destacados</h2>
+<p id="stats" class="note"></p>
+<div id="destacados" class="grid"></div>
+</main>
+<footer>Proyecto de Comercio Electrónico · Programación Web ISC 5-1</footer>
+<script src="js/api.js"></script>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>
